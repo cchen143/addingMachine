@@ -15,6 +15,7 @@ public class Driver {
 		while (true) {
 			System.out.println("Enter a formula:  ");
 			String s = input.nextLine();
+			if (s.equals("quit")) break;
 			String [] temp = s.split(" ");
 			if (temp.length != 3) {
 				System.out.println("Wrong format.");
@@ -24,6 +25,7 @@ public class Driver {
 			cal.calculate(temp[0], temp[1], temp[2]);
 			System.out.println("");
 		}
+		input.close();
 		
 	}
 }
